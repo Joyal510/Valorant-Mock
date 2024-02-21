@@ -1,0 +1,168 @@
+@font-face {
+  font-family: valorant;
+  src: url("./valofont.ttf");
+}
+
+@font-face {
+  font-family: comic-neue;
+  src: url("./ComicNeue-Regular.ttf");
+}
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  text-decoration: none;
+}
+
+.login {
+  position: relative;
+  /* left: 280px; */
+  height: 100vh;
+  width: 100vw;
+}
+
+.kayo-wallpaper {
+  position: relative;
+  top: 35px;
+  left: 520px;
+  z-index: 3;
+  /* background-color: rgb(255, 0, 0); */
+  height: 640px;
+  width: 950px;
+  border-radius: 10px;
+}
+.kayoImage {
+  width: 100%; /* Adjust the width of the container as needed */
+  height: 100%;
+  border-radius: 7px;
+  object-fit: cover;
+}
+.white-background {
+  position: relative;
+  right: -50px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  left: 320px;
+  /* top: -600px;
+    left: 320px; */
+  z-index: 1;
+  height: 640px;
+  width: 330px;
+  /* background-color: rgb(40, 192, 60); */
+  border-radius: 10px;
+  gap: 1rem;
+}
+
+.container {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  top: -610px;
+  left: -180px;
+  height: 653px;
+  width: 345px;
+  /* background-color: rgb(251, 0, 255); */
+  border-radius: 15px;
+}
+.login-text {
+  position: absolute;
+  top: 180px;
+  left: 20px;
+  font-family: comic-neue;
+  font-size: 22px;
+  font-weight: bold;
+  /* background-color: red; */
+  color: black;
+}
+
+#inputElement {
+  position: relative;
+  top: -30px;
+  height: 40px;
+  width: 290px;
+  border: solid 2px rgb(242, 235, 235);
+  background-color: rgb(242, 235, 235);
+}
+
+#inputElement::placeholder {
+  position: relative;
+  text-indent: 10px;
+  /* font-size: 12px; */
+  font-weight: bold;
+}
+
+#inputElement:focus,
+#inputElement:not(:focus) {
+  text-indent: 10px;
+  font-weight: bold;
+}
+
+.riot-account {
+  text-align: left;
+}
+
+.login-valorant-logo {
+  position: relative;
+  top: -140px;
+  height: 80px;
+  width: auto;
+}
+
+.go-forward {
+  background-color: red;
+  height: 50px;
+  width: 55px;
+  border-color: white;
+  border-radius: 10px;
+  transition: box-shadow 0.5s ease;
+}
+.go-forward:hover {
+  cursor: pointer;
+  box-shadow: 2px 2px 5px 0.4px rgb(207, 184, 184);
+}
+
+.lucide-arrow-right {
+  color: white;
+}
+
+.createAccount {
+  position: relative;
+  z-index: 3;
+  font-weight: bold;
+  font-family: comic-neue;
+  top: 200px;
+  left: 35px;
+  /* left: -230px; */
+  color: rgb(150, 140, 140);
+  font-size: 10px;
+  white-space: nowrap;
+  letter-spacing: 1px;
+  /* background-color: red; */
+}
+#hoverBlack:hover {
+  color: black;
+}
+
+.cant-sign-in {
+  position: relative;
+  top: 5px;
+  text-align: left;
+  font-family: comic-neue;
+  font-size: 10px;
+  font-weight: bold;
+  white-space: nowrap;
+  z-index: 3;
+  letter-spacing: 1px;
+  top: 195px;
+  left: 35px;
+}
+
+.cant-sign-in a {
+  color: rgb(150, 140, 140);
+}
