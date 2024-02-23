@@ -6,6 +6,7 @@ import valorantlogo from "../public/images/valorantlogo.png";
 import { MoveRight } from "lucide-react";
 import { useState } from "react";
 
+
 function signup() {
   const [formData, setFormData] = useState({
     username: "",
@@ -20,7 +21,8 @@ function signup() {
   //     [name]: value,
   //   }));
   // };
-  const handleChange = e => {
+
+  const handleChange = (e) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
   };
 
@@ -38,6 +40,7 @@ function signup() {
       if (response.ok) {
         console.log("Form data successfully sent to server");
         console.log(formData);
+        
         // console.log(formData);
         // window.location.href = "/login";
       } else {

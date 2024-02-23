@@ -11,9 +11,9 @@ export function handler(data) {
   const currentData = data;
   console.log(currentData);
 }
-
-const app = express();
 app.use(bodyParser.json());
+const app = express();
+
 
 const SignupSchema = mongoose.Schema({
   username: {
@@ -30,7 +30,7 @@ const SignupSchema = mongoose.Schema({
   },
 });
 
-const database = mongoose.model("database", SignupSchema);
+export const database = mongoose.model("database", SignupSchema);
 
 
 
@@ -46,7 +46,8 @@ app.post("/signup", async (req, res) => {
       password: formData.password,
       // Add more fields as needed
     });
-    await newUser.save();
+    
+    // await newUser.save();
 
     console.log("User saved successfully");
 
