@@ -7,12 +7,10 @@ export default async function handler(req, res) {
     if (req.method === "POST") {
       await connectDB();
       const { formData } = req.body;
-      // const data = await database.create(formData)
-      // data.save()
       const data = new database(formData);
       await data.save()
       console.log("Received data:", formData);
-      
+
       res.status(200).json({ message: "Form data received", formData });
     } else {
       res.status(405).json({ error: "Method Not Allowed" });

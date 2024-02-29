@@ -3,15 +3,50 @@ import Image from "next/image";
 import "../src/app/login.css";
 import kayoWallpaper from "../public/images/kayoWallpaper.jpg";
 import valorantlogo from "../public/images/valorantlogo.png";
+import { useState } from "react";
+// import database from "../models/Schema";
 
 function login() {
+  const [LoginData, setLoginData] = useState({
+    username: "",
+    password: "",
+  });
+
+  const handleLoginChange = (e) => {
+    setLoginData({ ...LoginData, [e.target.name]: e.target.value });
+  };
+
+  const handleLogin = async (e) => {
+    e.preventDefault();
+    // console.log(LoginData);
+    try {
+      const info = await fetch("/api/auth", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(LoginData),
+      });
+
+      if (info.ok) {
+        console.log("User is valid.");
+        console.log(LoginData);
+        // window.location.href = "/home";
+      } else {
+        console.error("User is invalid.");
+      }
+    } catch (error) {
+      console.error("Error submitting form data:", error);
+    }
+  };
+
   return (
     <>
       <div className="login">
         <div className="kayo-wallpaper">
           <Image className="kayoImage" src={kayoWallpaper} />
         </div>
-        <form className="container" action="./login" method="post">
+        <form className="container" onSubmit={handleLogin} method="post">
           <div className="white-background">
             <Image className="login-valorant-logo" src={valorantlogo} />
             <div className="login-text">
@@ -20,18 +55,22 @@ function login() {
               <div className="riot-account">Riot Account</div>
             </div>
             <input
-            name="username"
+              name="username"
+              onChange={handleLoginChange}
+              value={LoginData.username}
               id="inputElement"
               className="login-username"
               placeholder="USERNAME"
             />
             <input
-            name="password"
+              name="password"
+              onChange={handleLoginChange}
+              value={LoginData.password}
               id="inputElement"
               className="login-password"
               placeholder="PASSWORD"
             />
-            <button className="go-forward">
+            {/* <button className="go-forward">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 width="24"
@@ -47,7 +86,8 @@ function login() {
                 <path d="M5 12h14" />
                 <path d="m12 5 7 7-7 7" />
               </svg>
-            </button>
+            </button> */}
+            <button type="submit">Login</button>
           </div>
           <div>
             <div id="hoverBlack" className="cant-sign-in">

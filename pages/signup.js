@@ -3,9 +3,8 @@ import Image from "next/image";
 import "../src/app/signup.css";
 import valoJett from "../public/images/valoJett.jpg";
 import valorantlogo from "../public/images/valorantlogo.png";
-import { MoveRight } from "lucide-react";
+
 import { useState } from "react";
-const { connectDB } = require("../mongodb");
 
 // connectDB();
 
@@ -28,15 +27,13 @@ function signup() {
         headers: {
           "Content-Type": "application/json",
         },
-        body: JSON.stringify({formData }),
+        body: JSON.stringify({ formData }),
       });
 
       if (response.ok) {
         console.log("Form data successfully sent to server");
-        console.log(formData);
-
         // console.log(formData);
-        // window.location.href = "/login";
+        window.location.href = "/login";
       } else {
         console.error("Failed to submit form data to server");
       }
@@ -54,11 +51,7 @@ function signup() {
         <div className="valojett">
           <Image className="valojett-image" src={valoJett} />
         </div>
-        <form
-          onSubmit={handleSubmit}
-          id="myForm"
-          method="post"
-        >
+        <form onSubmit={handleSubmit} id="myForm" method="post">
           <div className="signup-container">
             <Image className="signup-valorant-logo" src={valorantlogo}></Image>
             <div className="signup-text">
@@ -92,10 +85,7 @@ function signup() {
               className="signup-password"
               placeholder="PASSWORD"
             ></input>
-            <button type="submit">
-              SUBMIT
-              {/* <MoveRight type="submit" className="move-right" href="/login" /> */}
-            </button>
+            <button type="submit">SUBMIT</button>
             <a className="middle" href="/login">
               <div className="already-have-account">
                 Already have an account?
