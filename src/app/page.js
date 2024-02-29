@@ -1,14 +1,13 @@
-import Image from "next/image";
 import "./globals.css";
-import Link from "next/link";
+import { connectDB } from "../../mongodb";
+import database from "../../models/Schema";
 
-import { connectDB } from "../../lib/mongodb";
 const bodyParser = require("body-parser");
 const express = require("express");
 const app = express();
 app.use(bodyParser.json());
 
-connectDB();
+// connectDB();
 
 export default function Home() {
   return (

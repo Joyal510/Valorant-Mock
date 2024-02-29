@@ -5,7 +5,9 @@ import valoJett from "../public/images/valoJett.jpg";
 import valorantlogo from "../public/images/valorantlogo.png";
 import { MoveRight } from "lucide-react";
 import { useState } from "react";
+const { connectDB } = require("../mongodb");
 
+// connectDB();
 
 function signup() {
   const [formData, setFormData] = useState({
@@ -14,14 +16,6 @@ function signup() {
     password: "",
   });
 
-  // const handleChange = (e) => {
-  //   const { name, value } = e.target;
-  //   setFormData((prevState) => ({
-  //     ...prevState,
-  //     [name]: value,
-  //   }));
-  // };
-
   const handleChange = (e) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
   };
@@ -29,18 +23,18 @@ function signup() {
   const handleSubmit = async (e, res) => {
     e.preventDefault();
     try {
-      const response = await fetch("/signup", {
+      const response = await fetch("/api/post", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
         },
-        body: JSON.stringify(formData),
+        body: JSON.stringify({formData }),
       });
 
       if (response.ok) {
         console.log("Form data successfully sent to server");
         console.log(formData);
-        
+
         // console.log(formData);
         // window.location.href = "/login";
       } else {
@@ -63,7 +57,6 @@ function signup() {
         <form
           onSubmit={handleSubmit}
           id="myForm"
-          action="/signup"
           method="post"
         >
           <div className="signup-container">
