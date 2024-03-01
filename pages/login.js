@@ -4,7 +4,6 @@ import "../src/app/login.css";
 import kayoWallpaper from "../public/images/kayoWallpaper.jpg";
 import valorantlogo from "../public/images/valorantlogo.png";
 import { useState } from "react";
-// import database from "../models/Schema";
 
 function login() {
   const [LoginData, setLoginData] = useState({
@@ -20,7 +19,7 @@ function login() {
     e.preventDefault();
     // console.log(LoginData);
     try {
-      const info = await fetch("/api/auth", {
+      const response = await fetch("/api/auth", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -28,12 +27,10 @@ function login() {
         body: JSON.stringify(LoginData),
       });
 
-      if (info.ok) {
-        console.log("User is valid.");
-        console.log(LoginData);
-        // window.location.href = "/home";
-      } else {
-        console.error("User is invalid.");
+      const data = await response.json();
+      console.log(data);
+      if (response.ok) {
+        window.location.href = "/home";
       }
     } catch (error) {
       console.error("Error submitting form data:", error);
