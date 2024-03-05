@@ -1,3 +1,56 @@
+@font-face {
+  font-family: bebas;
+  src: url("./BebasNeue-Regular.ttf");
+}
+
 body {
-    margin: 0;
+  margin: 0;
+  background-image: url("../../public//images/cypher.jpg");
+  background-size: cover;
+}
+.button-container {
+  position: relative;
+  top: 200px;
+  left: 50px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  /* background-color: red; */
+  height: 400px;
+  width: max-content;
+}
+.button-container button {
+  background-color: transparent;
+  border: transparent;
+  font-weight: 800;
+  font-size: 3rem;
+  font-family: bebas;
+  color: white;
+  text-align: left;
+}
+.button-container a {
+  text-decoration: none;
+}
+.home-button {
+  display: flex;
+  gap: calc(4px);
+  flex-direction: row;
+  box-shadow: 2px 2px 4px 1px black;
+}
+
+.home-button:hover,
+.diamond {
+  font-size: 5rem;
+  color: black;
+  cursor: pointer;
+}
+
+.diamond {
+  position: relative;
+  top: 22px;
+  left: -4px;
+  height: 8px;
+  width: 8px;
+  background-color: white;
+  transform: rotate(45deg);
 }

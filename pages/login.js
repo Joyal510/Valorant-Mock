@@ -30,7 +30,7 @@ function login() {
       const data = await response.json();
       console.log(data);
       if (response.ok) {
-        window.location.href = "/home";
+        window.location.href = "/home/home";
       }
     } catch (error) {
       console.error("Error submitting form data:", error);

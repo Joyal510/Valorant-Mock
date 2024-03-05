@@ -51,6 +51,12 @@ body {
   font-family: valorant;
   font-size: 35px;
   animation: spinBorder 2s linear infinite;
+  color: rgb(255, 255, 255);
+  text-decoration: none;
+}
+
+.startButton:hover {
+  cursor: pointer;
 }
 
 @keyframes spinBorder {
@@ -82,8 +88,3 @@ body {
   border-top: 2px solid white; 
   border-bottom: 2px solid white; 
 } */
-
-.startButton a {
-  text-decoration: none;
-  color: white;
-}

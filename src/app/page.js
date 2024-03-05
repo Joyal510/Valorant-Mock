@@ -1,6 +1,7 @@
 import "./globals.css";
 import { connectDB } from "../../mongodb";
 import database from "../../models/Schema";
+import Link from "next/link";
 
 const bodyParser = require("body-parser");
 const express = require("express");
@@ -17,10 +18,13 @@ export default function Home() {
           {/* <Image className="chamber" src={chamber} /> */}
         </div>
         <div className="twentyPercent">
-          <button className="startButton">
-            {" "}
-            <a href="/login">START </a>
-          </button>
+          <Link href="/login">
+            <button className="startButton">
+              {" "}
+              {/* <a href="/login">START </a> */}
+              START
+            </button>
+          </Link>
         </div>
       </div>
     </>
