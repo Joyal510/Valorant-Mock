@@ -25,7 +25,7 @@ body {
   font-weight: 800;
   font-size: 3rem;
   font-family: bebas;
-  color: white;
+  color: rgb(0, 0, 0);
   text-align: left;
 }
 .button-container a {
@@ -35,11 +35,10 @@ body {
   display: flex;
   gap: calc(4px);
   flex-direction: row;
-  box-shadow: 2px 2px 4px 1px black;
+  box-shadow: 1px 1px 4px 1px black;
 }
 
-.home-button:hover,
-.diamond {
+.home-button:hover {
   font-size: 5rem;
   color: black;
   cursor: pointer;
@@ -51,6 +50,6 @@ body {
   left: -4px;
   height: 8px;
   width: 8px;
-  background-color: white;
+  background-color: rgb(0, 0, 0);
   transform: rotate(45deg);
 }
