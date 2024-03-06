@@ -9,5 +9,6 @@
       "src": "pages/**/*.js",
       "use": "@vercel/next"
     }
-  ]
+  ],
+  "rewrites": [{ "source": "/(.*)", "destination": "/" }]
 }
