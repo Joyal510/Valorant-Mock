@@ -4,6 +4,7 @@ import "../src/app/login.css";
 import kayoWallpaper from "../public/images/kayoWallpaper.jpg";
 import valorantlogo from "../public/images/valorantlogo.png";
 import { useState } from "react";
+import Link from "next/link";
 
 function login() {
   const [LoginData, setLoginData] = useState({
@@ -30,7 +31,7 @@ function login() {
       const data = await response.json();
       console.log(data);
       if (response.ok) {
-        window.location.href = "/home/home";
+        window.location.href = "/home";
       }
     } catch (error) {
       console.error("Error submitting form data:", error);
@@ -58,6 +59,7 @@ function login() {
               id="inputElement"
               className="login-username"
               placeholder="USERNAME"
+              // autocomplete="off"
             />
             <input
               name="password"
@@ -66,10 +68,12 @@ function login() {
               id="inputElement"
               className="login-password"
               placeholder="PASSWORD"
+              // autocomplete="off"
             />
-            {/* <button className="go-forward">
+            <button type='submit' className="go-forward">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
+                
                 width="24"
                 height="24"
                 viewBox="0 0 24 24"
@@ -83,24 +87,30 @@ function login() {
                 <path d="M5 12h14" />
                 <path d="m12 5 7 7-7 7" />
               </svg>
-            </button> */}
-            <button type="submit">Login</button>
+            </button>
+            {/* <button type="submit">Login</button> */}
           </div>
           <div>
             <div id="hoverBlack" className="cant-sign-in">
-              <a
+              {/* <a
                 href="https://support-valorant.riotgames.com/hc/en-us/articles/360046229573-Recover-Your-Account"
                 target="_blank"
                 id="hoverBlack"
               >
                 CAN'T SIGN IN?
-              </a>
+              </a> */}
+              <Link
+                href="https://support-valorant.riotgames.com/hc/en-us/articles/360046229573-Recover-Your-Account"
+                target="_blank"
+                id="hoverBlack"
+              >
+                {" "}
+                CAN'T SIGN IN?
+              </Link>
             </div>
-
-            <a href="/signup" id="hoverBlack" className="createAccount">
+            <Link href="/signup" id="hoverBlack" className="createAccount">
               CREATE ACCOUNT
-            </a>
-
+            </Link>
             <br />
           </div>
         </form>

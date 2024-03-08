@@ -6,13 +6,13 @@ function Home() {
   return (
     <>
       <div className="button-container">
-        <Link href='/home/home'>
+        <Link href='/home'>
           {" "}
           <button className="home-button">
             <div className="diamond"></div>PLAY
           </button>
         </Link>
-        <Link href='/home/home'>
+        <Link href='/home'>
         <button className="home-button">
           <div className="diamond"></div>CAREER
         </button>
@@ -22,12 +22,12 @@ function Home() {
           <div className="diamond"></div>COLLECTION
         </button>
         </Link>
-        <Link href='/home/home'>
+        <Link href='/home'>
         <button className="home-button">
           <div className="diamond"></div>AGENTS
         </button>
         </Link>
-        <Link href='/home/home'>
+        <Link href='/home'>
         <button className="home-button">
           <div className="diamond"></div>STORE
         </button>

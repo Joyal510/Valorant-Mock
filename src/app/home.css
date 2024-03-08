@@ -23,7 +23,7 @@ body {
   background-color: transparent;
   border: transparent;
   font-weight: 800;
-  font-size: 3rem;
+  font-size: 4rem;
   font-family: bebas;
   color: rgb(0, 0, 0);
   text-align: left;
@@ -36,20 +36,31 @@ body {
   gap: calc(4px);
   flex-direction: row;
   box-shadow: 1px 1px 4px 1px black;
+  transition: ease-in-out 0.5s;
 }
 
 .home-button:hover {
+  transform: translateX(10px);
   font-size: 5rem;
-  color: black;
+  border: solid 1px black;
+  color: rgb(255, 255, 255);
   cursor: pointer;
+  transition: ease-in;
+}
+.home-button:hover .diamond {
+  position: relative;
+  top: 40px;
+  background-color: white;
+  transform: rotate(180deg);
 }
 
 .diamond {
   position: relative;
-  top: 22px;
+  top: 32px;
   left: -4px;
   height: 8px;
   width: 8px;
   background-color: rgb(0, 0, 0);
   transform: rotate(45deg);
+  transition: transform 0.4s;
 }

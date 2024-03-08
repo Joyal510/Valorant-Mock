@@ -18,7 +18,7 @@ export default function Home() {
           {/* <Image className="chamber" src={chamber} /> */}
         </div>
         <div className="twentyPercent">
-          <Link href="/login">
+          <Link id='startbutton-container' href="/login">
             <button className="startButton">
               {" "}
               {/* <a href="/login">START </a> */}

@@ -3,7 +3,7 @@ import Image from "next/image";
 import "../src/app/signup.css";
 import valoJett from "../public/images/valoJett.jpg";
 import valorantlogo from "../public/images/valorantlogo.png";
-
+import Link from "next/link";
 import { useState } from "react";
 
 // connectDB();
@@ -49,11 +49,15 @@ function signup() {
     <>
       <div className="sign-up">
         <div className="valojett">
-          <Image className="valojett-image" src={valoJett} />
+          <Image alt="logo" className="valojett-image" src={valoJett} />
         </div>
         <form onSubmit={handleSubmit} id="myForm" method="post">
           <div className="signup-container">
-            <Image className="signup-valorant-logo" src={valorantlogo}></Image>
+            <Image
+              alt="logo"
+              className="signup-valorant-logo"
+              src={valorantlogo}
+            ></Image>
             <div className="signup-text">
               Sign up for a <span className="valorant-text">valorant</span>{" "}
               Account.
@@ -66,6 +70,7 @@ function signup() {
               onChange={handleChange}
               className="signup-username"
               placeholder="USERNAME"
+              autocomplete="off"
             ></input>
             <input
               name="email"
@@ -75,6 +80,7 @@ function signup() {
               id="signup-input"
               className="signup-email"
               placeholder="EMAIL"
+              autocomplete="off"
             ></input>
             <input
               name="password"
@@ -84,13 +90,16 @@ function signup() {
               id="signup-input"
               className="signup-password"
               placeholder="PASSWORD"
+              autocomplete="off"
             ></input>
-            <button type="submit">SUBMIT</button>
-            <a className="middle" href="/login">
+            <button type="submit" className='move-right'>
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-chevron-right"><path d="m9 18 6-6-6-6"/></svg>
+            </button>
+            <Link className="middle" href="/login">
               <div className="already-have-account">
                 Already have an account?
               </div>
-            </a>
+            </Link>
           </div>
         </form>
       </div>
