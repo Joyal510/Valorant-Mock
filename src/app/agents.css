@@ -1,0 +1,51 @@
+@font-face {
+  font-family: bebas;
+  src: url("./BebasNeue-Regular.ttf");
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #ff4d6d;
+}
+
+.agents-title {
+  position: relative;
+  height: max-content;
+  width: max-content;
+  font-size: 7rem;
+  font-weight: 600;
+  font-family: bebas;
+  background-color: red;
+  margin-inline: auto;
+}
+
+.agents-components {
+  position: relative;
+  top: 20px;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  background-color: rgb(255, 255, 255);
+  height: max-content;
+  width: max-content;
+}
+
+.agent-middle {
+  height: 400px;
+  width: 400px;
+  background-color: black;
+}
+
+.agent-left {
+  height: 500px;
+  width: 400px;
+  background-color: black;
+}
+
+.agent-right {
+  height: 500px;
+  width: 400px;
+  background-color: black;
+}

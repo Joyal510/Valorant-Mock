@@ -1,0 +1,43 @@
+body {
+  margin: 0;
+  background-color: #14213d;
+  /* background-image: url("./../../public//images/collectionwallpaper.jpg"); */
+  background-size: cover; /* This property ensures that the background image covers the entire element */
+  background-repeat: no-repeat;
+}
+.collection-wrapper {
+  display: flex;
+  justify-content: center;
+}
+.colnav-wrapper {
+  display: flex;
+  flex-direction: column;
+}
+.navigation {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  position: relative;
+  top: 40px;
+  min-height: 40px;
+  min-width: 300px;
+  background-color: #fb6f92;
+  border-radius: 20px;
+}
+
+.navigation a {
+  color: white;
+  text-decoration: none;
+}
+
+.middle-wrapper {
+  position: relative;
+  top: 100px;
+  height: 500px;
+  width: 400px;
+  background-color: black;
+}
+
+
+/* //////////////////////////////////////////////////////////////////////////// */
+

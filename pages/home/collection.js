@@ -1,13 +1,14 @@
-import React from 'react'
-
+import React from "react";
+import Image from "next/image";
+import "../../src/app/collection.css";
+import CollNav from "@/app/components/CollNav";
 
 function collection() {
-  
   return (
-    <>
-    All of the collection will be appear here!
-    </>
-  )
+    <div className='collection-wrapper'>
+      <CollNav />
+    </div>
+  );
 }
 
-export default collection
+export default collection;

@@ -22,7 +22,7 @@ function Home() {
           <div className="diamond"></div>COLLECTION
         </button>
         </Link>
-        <Link href='/home'>
+        <Link href='/home/agents'>
         <button className="home-button">
           <div className="diamond"></div>AGENTS
         </button>
