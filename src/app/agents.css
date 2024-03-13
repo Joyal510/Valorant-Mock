@@ -33,9 +33,21 @@ body {
 }
 
 .agent-middle {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 0.7em;
   height: 400px;
   width: 400px;
   background-color: black;
+}
+
+.agent-middle img {
+  border: 1px solid white;
+}
+.agent-middle img:hover {
+  cursor: pointer;
 }
 
 .agent-left {
@@ -48,4 +60,11 @@ body {
   height: 500px;
   width: 400px;
   background-color: black;
+}
+
+.left-rightComponent {
+  position: relative;
+  top: -420px;
+  display: flex;
+  gap: 30rem;
 }

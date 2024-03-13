@@ -1,28 +1,36 @@
 import React from "react";
-import { useState, useEffect } from "react";
 import Image from "next/image";
-import valorantAgents from "./../../../valorantAgents.json";
+import { useRouter } from "next/router";
+import Link from "next/link";
 
-function AgentMiddle() {
-  const [icons, setIcons] = useState([]);
-  useEffect(() => {
-    // Fetch the JSON data
-    fetch("https://valorant-api.com/v1/agents")
-      .then((response) => response.json())
-      .then((data) => setIcons(Object.values(data)))
-      .catch((error) => console.error("Error fetching data:", error));
-  }, []);
-  console.log(icons);
+function AgentMiddle(props) {
+  const router = useRouter();
+  const { uuid } = router.query;
+
+  const onAgentClick = (e, uuid) => {
+    e.preventDefault();
+    // router.push(`/agents/${uuid}`);
+
+    // console.log(uuid);
+  };
+
+  // console.log(icons);
   return (
     <div className="agent-middle">
-      {icons.map((element) => (
-        <Image
-          key={element.uuid}
-          src={element.displayName}
-          alt={element.displayName}
-          width={150} // Adjust width as needed
-          height={150} // Adjust height as needed
-        />
+      {props.icons.map((element) => (
+       
+          <Image
+            onClick={(e) => {
+              onAgentClick(e, element.uuid);
+              props.onHandleId(element.uuid);
+            }}
+            key={element.uuid}
+            src={element.displayIcon}
+            alt={element.displayName}
+            width="65" // Adjust width
+            height="65" // Adjust height
+          />
+
       ))}
     </div>
   );
