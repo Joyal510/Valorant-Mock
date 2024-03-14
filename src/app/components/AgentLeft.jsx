@@ -9,11 +9,21 @@ function AgentLeft(props) {
   useEffect(() => {
     console.log(props.icons);
   });
-  
+  const agent = props.icons?.find((agent) => agent.uuid === props.selectId);
   return (
     <div className="agent-left">
-      {props.icons.uuid === props.selectId && (
-        <Image src={props.icons.data.displayIcon} width="65" height="65" />
+      {agent && (
+        <>
+          <Image
+            className="agent-fullPortrait"
+            alt="image"
+            src={agent.fullPortrait}
+            width="465"
+            height="465"
+          />
+          <label className="agent-label">DESCRIPTION - </label>
+          <p className="agent-desc">{agent.description}</p>
+        </>
       )}
     </div>
   );

@@ -9,16 +9,14 @@ function AgentMiddle(props) {
 
   const onAgentClick = (e, uuid) => {
     e.preventDefault();
-    // router.push(`/agents/${uuid}`);
-
-    // console.log(uuid);
   };
 
   // console.log(icons);
   return (
     <div className="agent-middle">
-      {props.icons.map((element) => (
-       
+      {props.icons
+        .filter((element) => element.isPlayableCharacter === true)
+        .map((element) => (
           <Image
             onClick={(e) => {
               onAgentClick(e, element.uuid);
@@ -30,8 +28,7 @@ function AgentMiddle(props) {
             width="65" // Adjust width
             height="65" // Adjust height
           />
-
-      ))}
+        ))}
     </div>
   );
 }

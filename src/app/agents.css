@@ -2,22 +2,28 @@
   font-family: bebas;
   src: url("./BebasNeue-Regular.ttf");
 }
+@font-face {
+  font-family: comic-neue;
+  src: url("./ComicNeue-Regular.ttf");
+}
 
 body {
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: #ff4d6d;
+  background-color: #000000;
 }
 
 .agents-title {
   position: relative;
+  top: 20px;
   height: max-content;
   width: max-content;
   font-size: 7rem;
   font-weight: 600;
   font-family: bebas;
-  background-color: red;
+  color: white;
+  /* background-color: red; */
   margin-inline: auto;
 }
 
@@ -27,7 +33,7 @@ body {
   display: flex;
   align-items: center;
   gap: 1rem;
-  background-color: rgb(255, 255, 255);
+  /* background-color: rgb(255, 255, 255); */
   height: max-content;
   width: max-content;
 }
@@ -53,13 +59,25 @@ body {
 .agent-left {
   height: 500px;
   width: 400px;
-  background-color: black;
+  background-color: transparent;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.agent-left p {
+  position: relative;
+  top: -52px;
+  text-align: justify;
+  padding-inline: 15px;
+  font-size: 1.2rem;
 }
 
 .agent-right {
   height: 500px;
   width: 400px;
-  background-color: black;
+  background-color: transparent;
 }
 
 .left-rightComponent {
@@ -67,4 +85,78 @@ body {
   top: -420px;
   display: flex;
   gap: 30rem;
+}
+
+.agent-fullPortrait {
+  position: relative;
+  top: -80px;
+}
+
+.agent-desc {
+  color: white;
+  font-family: comic-neue;
+}
+.agent-label {
+  font-family: bebas;
+  letter-spacing: 0.06em;
+  position: relative;
+  font-size: 1.5rem;
+  top: -40px;
+  left: -124px;
+  color: white;
+}
+
+.agent-role-title {
+  position: relative;
+  top: -30px;
+  left: 10px;
+  /* background-color: rebeccapurple; */
+  color: white;
+  font-family: bebas;
+  letter-spacing: 0.06em;
+  font-size: 1.5rem;
+}
+
+.agent-role-desc {
+  height: max-content;
+  padding-inline: 15px;
+  /* background-color: red; */
+  color: white;
+  font-family: comic-neue;
+}
+
+.agent-role-image {
+  padding-block: 10px;
+  padding-inline: 15px;
+}
+
+.agent-ability-title {
+  font-family: bebas;
+  padding-inline: 15px;
+  color: white;
+  font-size: 1.5rem;
+  letter-spacing: 0.06em;
+}
+
+.agent-abilities {
+  height: max-content;
+  width: max-content;
+  /* background-color: rgb(47, 0, 255); */
+  display: flex;
+  flex-direction: column;
+  gap: 0.5em;
+  padding-block: 15px;
+  padding-inline: 15px;
+}
+
+.together {
+  display: flex;
+}
+.ability-title {
+  font-family: bebas;
+  color: white;
+  font-size: 1.8rem;
+  position: relative;
+  top: 10px;
+  padding-inline: 15px;
 }
