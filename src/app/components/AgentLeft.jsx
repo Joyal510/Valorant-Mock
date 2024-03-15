@@ -21,7 +21,8 @@ function AgentLeft(props) {
             width="465"
             height="465"
           />
-          <label className="agent-label">DESCRIPTION - </label>
+          <label className="agent-name">{agent.displayName}</label>
+        
           <p className="agent-desc">{agent.description}</p>
         </>
       )}

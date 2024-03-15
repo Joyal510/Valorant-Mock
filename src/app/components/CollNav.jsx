@@ -17,7 +17,7 @@ function CollNav() {
         >
           <div className="nav-button">Skins</div>
         </Link>
-        <Link href="/">
+        <Link href="/home/collection">
           {" "}
           <div className="nav-button">Maps</div>
         </Link>

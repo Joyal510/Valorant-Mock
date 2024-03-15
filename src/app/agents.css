@@ -14,6 +14,27 @@ body {
   background-color: #000000;
 }
 
+.back-to-home {
+  position: relative;
+  top: -90px;
+  left: -90px;
+  color: white;
+  position: relative;
+  height: max-content;
+  width: max-content;
+  /* background-color: red; */
+}
+
+
+.agent-name {
+  position: relative;
+  top: -45px;
+  left: -10px;
+  font-size: 3rem;
+  font-weight: 600;
+  font-family: bebas;
+  color: white;
+}
 .agents-title {
   position: relative;
   top: 20px;
@@ -29,7 +50,7 @@ body {
 
 .agents-components {
   position: relative;
-  top: 20px;
+  top: -50px;
   display: flex;
   align-items: center;
   gap: 1rem;
@@ -95,15 +116,6 @@ body {
 .agent-desc {
   color: white;
   font-family: comic-neue;
-}
-.agent-label {
-  font-family: bebas;
-  letter-spacing: 0.06em;
-  position: relative;
-  font-size: 1.5rem;
-  top: -40px;
-  left: -124px;
-  color: white;
 }
 
 .agent-role-title {
