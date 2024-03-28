@@ -2,12 +2,31 @@ import React from "react";
 import Image from "next/image";
 import "../src/app/info.css";
 import valorantlogo from "../public/images/valorantlogo.png";
-import omen from '../public/images/omen.png'
-import valorant from '../public/images/valorant.jpg'
+import omen from "../public/images/omen.png";
+import valorant from "../public/images/valorant.jpg";
+import Link from "next/link";
 
 function info() {
   return (
     <>
+      <Link href='/home'>
+        <div className="back-in-info">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="94"
+            height="94"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            class="lucide lucide-chevron-left"
+          >
+            <path d="m15 18-6-6 6-6" />
+          </svg>
+        </div>
+      </Link>
       <div className="containsAllhexagonProperties">
         <div className="text">
           PLAY <br></br>VALORANT <br></br> FOR FREE !
@@ -25,11 +44,15 @@ function info() {
 
         <div className="black"></div>
       </div>
-{/* ============================================================================ */}
+      {/* ============================================================================ */}
 
       <div className="content-holder">
         <p>
-          <a className="start" href="https://playvalorant.com/en-us/?gad_source=1&gclid=Cj0KCQiA2KitBhCIARIsAPPMEhIIJOc34F1IFpuadYlda6LBt6fRtGlrBDqmYhfoCWKSeqD-lJIF-dkaAkWhEALw_wcB&gclsrc=aw.ds" target="_blank">
+          <a
+            className="start"
+            href="https://playvalorant.com/en-us/?gad_source=1&gclid=Cj0KCQiA2KitBhCIARIsAPPMEhIIJOc34F1IFpuadYlda6LBt6fRtGlrBDqmYhfoCWKSeqD-lJIF-dkaAkWhEALw_wcB&gclsrc=aw.ds"
+            target="_blank"
+          >
             Valorant
           </a>{" "}
           is a team-based first-person tactical hero shooter set in the near

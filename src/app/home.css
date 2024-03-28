@@ -90,3 +90,17 @@ body {
   transform: rotate(45deg);
   transition: transform 0.4s;
 }
+
+.information {
+  /* background-color: red; */
+  width: max-content;
+  position: relative;
+  top: -100px;
+  left: 1350px;
+  transition: ease 0.8s;
+}
+
+.information:hover {
+  transform: translateY(-10px);
+  cursor: pointer;
+}

@@ -141,8 +141,10 @@ body {
 
 p {
   font-family: comic-neue;
+  font-size: larger;
   padding: 0 200px;
   padding-top: 50px;
+  color: white;
 }
 
 .logo img {
@@ -168,6 +170,12 @@ p {
   color: red;
 }
 
-p {
+.back-in-info {
+  position: relative;
+  top: 40px;
+  left: 30px;
+  width: max-content;
   color: white;
+  z-index: 45;
+  /* background-color: red; */
 }
